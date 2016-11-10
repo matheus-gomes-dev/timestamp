@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 var url = require('url');
-var url_parts = url.parse(request.url, true);
 
 
 app.set('port', (process.env.PORT || 5000));
