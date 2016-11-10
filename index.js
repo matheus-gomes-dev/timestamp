@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-const url = require('url');
+var url = require('url');
 
 
 app.set('port', (process.env.PORT || 5000));
@@ -11,7 +11,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.send(urlObject.href);
+  response.send(url.urlObject.href);
 });
 
 app.listen(app.get('port'), function() {
