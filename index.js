@@ -11,7 +11,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
-app.get(function(request, response) {
+app.get('/', function(request, response) {
   var str = request.url;
   response.send(str);
   response.send("teste");
