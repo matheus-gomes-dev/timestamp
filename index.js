@@ -12,7 +12,9 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
 app.get(function(request, response) {
-  response.send(request.url);
+  var str = request.url;
+  response.send(str);
+  response.send("teste");
   
 });
 
