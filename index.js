@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var url = require('url');
+var url_parts = url.parse(request.url, true);
 
 
 app.set('port', (process.env.PORT || 5000));
@@ -11,8 +12,9 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.send(request.baseUrl);
-  console.log("ettcha");
+  console.log("Teste1");
+  response.send(url_parts);
+  console.log("Teste2");
 });
 
 app.listen(app.get('port'), function() {
