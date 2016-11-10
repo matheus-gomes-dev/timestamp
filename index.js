@@ -13,7 +13,6 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
   console.log("Teste1");
-  response.send(url_parts);
   console.log("Teste2");
 });
 
