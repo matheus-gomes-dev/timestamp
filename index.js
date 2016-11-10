@@ -13,7 +13,6 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
   var str = request.url;
-  response.send(str);
   response.send("teste");
   
 });
