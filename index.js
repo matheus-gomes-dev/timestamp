@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
   response.send(request.baseUrl);
+  console.log(request.baseUrl);
 });
 
 app.listen(app.get('port'), function() {
