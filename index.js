@@ -11,7 +11,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.send(url.urlObject.href);
+  response.send(request.baseUrl);
 });
 
 app.listen(app.get('port'), function() {
