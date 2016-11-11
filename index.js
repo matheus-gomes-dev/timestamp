@@ -13,11 +13,13 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
   var str = request.url;
+  response.send("Teste");
+/*
   if (str.search("January") != -1)
     response.send("teste1");
   else
     response.send("teste2");
-  
+*/
 });
 
 app.listen(app.get('port'), function() {
