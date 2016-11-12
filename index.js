@@ -23,7 +23,7 @@ app.get('*', function(req, response) {
 
 */
 
-  response.send(req.get);
+  //response.send(req.get);
   response.send(req.originalUrl);
 
   var a = new Date(UNIX_timestamp * 1000);
