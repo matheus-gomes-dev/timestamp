@@ -29,7 +29,7 @@ app.get('*', function(req, response) {
   if (isNaN(parameter))
     response.send("Informar data");
   else{
-    var a = new Date(UNIX_timestamp * 1000);
+    var a = new Date(parameter * 1000);
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     var year = a.getFullYear();
     var month = months[a.getMonth()];
