@@ -15,10 +15,24 @@ app.get('*', function(req, response) {
   var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
   //response.send(fullUrl);
 
+/*
   if (fullUrl.search("January") != -1)
     response.send("teste1");
   else
     response.send("teste2");
+
+*/
+
+  response.send(req.protocol);
+  response.send(req.get);
+  response.send(req.originalUrl);
+
+  var a = new Date(UNIX_timestamp * 1000);
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+
 
 });
 
