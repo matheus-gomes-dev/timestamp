@@ -26,13 +26,16 @@ app.get('*', function(req, response) {
   //response.send(req.get);
   var parameter = (req.originalUrl).substring(1,(req.originalUrl).length)
   response.send(parameter);
-  //if())
-
-  var a = new Date(UNIX_timestamp * 1000);
-  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  var year = a.getFullYear();
-  var month = months[a.getMonth()];
-  var date = a.getDate();
+  if (isNaN(parameter))
+    response.send("Informar data");
+  else{
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var time = date + ' ' + month + ' ' + year;
+    response.send(time);
 
 
 });
