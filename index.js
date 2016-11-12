@@ -11,7 +11,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function(req, response) {
+app.get('*', function(req, response) {
   var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
   response.send(fullUrl);
 /*
