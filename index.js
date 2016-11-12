@@ -36,6 +36,7 @@ app.get('*', function(req, response) {
     var date = a.getDate();
     var time = date + ' ' + month + ' ' + year;
     response.send(time);
+  }
 
 
 });
