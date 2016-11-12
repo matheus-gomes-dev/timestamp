@@ -15,7 +15,7 @@ app.get('*', function(req, response) {
   var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
   //response.send(fullUrl);
 
-  if (2>1)
+  if (fullUrl.search("January") != -1)
     response.send("teste1");
   else
     response.send("teste2");
