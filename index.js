@@ -28,7 +28,7 @@ app.get('*', function(req, response) {
   //response.send(parameter);
   if (isNaN(parameter))
     response.send("Informar data");
-  else{
+  else if (parameter != "" && !isNaN(parameter)){
     var a = new Date(parameter * 1000);
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     var year = a.getFullYear();
