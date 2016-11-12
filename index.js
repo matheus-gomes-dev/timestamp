@@ -23,7 +23,6 @@ app.get('*', function(req, response) {
 
 */
 
-  response.send(req.protocol);
   response.send(req.get);
   response.send(req.originalUrl);
 
