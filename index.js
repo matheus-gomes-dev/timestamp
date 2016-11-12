@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get('*', function(req, response) {
   var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
-  response.send(fullUrl);
+  //response.send(fullUrl);
 
   if (str.search("January") != -1)
     response.send("teste1");
