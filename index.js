@@ -25,7 +25,7 @@ app.get('*', function(req, response) {
 
   //response.send(req.get);
   var parameter = (req.originalUrl).substring(1,(req.originalUrl).length)
-  response.send(parameter);
+  //response.send(parameter);
   if (isNaN(parameter))
     response.send("Informar data");
   else{
