@@ -24,7 +24,9 @@ app.get('*', function(req, response) {
 */
 
   //response.send(req.get);
-  response.send(req.originalUrl);
+  var parameter = (req.originalUrl).substring(1,(req.originalUrl).length)
+  response.send(parameter);
+  //if())
 
   var a = new Date(UNIX_timestamp * 1000);
   var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
