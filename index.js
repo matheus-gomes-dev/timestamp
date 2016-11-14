@@ -26,8 +26,9 @@ app.get('*', function(req, response) {
   //response.send(req.get);
   var parameter = (req.originalUrl).substring(1,(req.originalUrl).length)
   //response.send(parameter);
-  if (isNaN(parameter))
-    response.send("Informar data");
+  if (isNaN(parameter) && (parameter.indexOf("January") >= 0) && (parameter.indexOf(",") >= 0)){
+    response.send("January " + parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")-1)) + parameter.substring((parameter.indexOf(",")+1),parameter.length));
+  }
   else if (parameter != "" && !isNaN(parameter)){
     var a = new Date(parameter * 1000);
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
