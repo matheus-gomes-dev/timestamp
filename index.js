@@ -27,7 +27,7 @@ app.get('*', function(req, response) {
   var parameter = (req.originalUrl).substring(1,(req.originalUrl).length)
   //response.send(parameter);
   if (isNaN(parameter) && (parameter.indexOf("January") >= 0) && (parameter.indexOf(",") >= 0)){
-    response.send("January " + parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")-1)) + parameter.substring((parameter.indexOf(",")+1),parameter.length));
+    response.send("January " + parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(","))) + parameter.substring((parameter.indexOf(",")+1),parameter.length));
   }
   else if (parameter != "" && !isNaN(parameter)){
     var a = new Date(parameter * 1000);
