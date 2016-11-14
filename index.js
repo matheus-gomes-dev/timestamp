@@ -27,7 +27,11 @@ app.get('*', function(req, response) {
   var parameter = (req.originalUrl).substring(1,(req.originalUrl).length)
   //response.send(parameter);
   if (isNaN(parameter) && (parameter.indexOf("January") >= 0) && (parameter.indexOf(",") >= 0)){
-    response.send("January " + parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(","))) + parameter.substring((parameter.indexOf(",")+1),parameter.length));
+  	//var month = '01';
+  	//var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    //response.send("January " + parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(","))) +', '+ parameter.substring((parameter.indexOf(",")+1),parameter.length));
+    var data = new Date('2012.08.10').getTime() / 1000;
+    response.send(data);
   }
   else if (parameter != "" && !isNaN(parameter)){
     var a = new Date(parameter * 1000);
