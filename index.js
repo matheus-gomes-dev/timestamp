@@ -30,8 +30,8 @@ app.get('*', function(req, response) {
   	//var month = '01';
   	//var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
     //response.send("January " + parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(","))) +', '+ parameter.substring((parameter.indexOf(",")+1),parameter.length));
-    var data = new Date('2012.08.10').getTime() / 1000;
-    response.send(data);
+    var parsedUnixTime = new Date('25 Dec 1995').getUnixTime();
+    response.send(parsedUnixTime);
   }
   else if (parameter != "" && !isNaN(parameter)){
     var a = new Date(parameter * 1000);
