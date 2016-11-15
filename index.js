@@ -37,7 +37,12 @@ app.get('*', function(req, response) {
     var teste = moment('2015-07-12 14:59:23', 'YYYY-MM-DD HH:mm:ss').valueOf()/1000;
     //console.log(parsedDate);
     console.log(teste);
-    response.send(JSON.stringify(teste));//moment returns an object
+    //response.send(JSON.stringify(teste));//moment returns an object
+    var time = {
+    	unix: teste,
+    	natural: "January " + day + ', ' + year 
+    };
+    response.json(time);
     
     //var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
     //response.send(timestamp.now());
