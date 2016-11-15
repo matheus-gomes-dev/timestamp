@@ -204,8 +204,13 @@ app.get('*', function(req, response) {
     response.json(time);
   }
 
-  else
-  	res.send("Error");
+  else{
+  	var time = {
+    	unix: null,
+    	natural: null
+    };
+    response.json(time);
+  }
 
 
 });
