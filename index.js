@@ -31,7 +31,7 @@ app.get('*', function(req, response) {
   	console.log("teste");
   	
   	var month = '01';
-  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+  	var year = parameter.substring((parameter.indexOf("?")+1),parameter.length);
     var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
     var parsedDate = year + '/' + month + '/' + day;
     var teste = moment('2015-07-12 14:59:23', 'YYYY-MM-DD HH:mm:ss').valueOf();
