@@ -17,7 +17,6 @@ app.get('*', function(req, response) {
   var parameter = (req.originalUrl).substring(1,(req.originalUrl).length)
   
   if (isNaN(parameter) && (parameter.indexOf("January") >= 0) && (parameter.indexOf(",") >= 0)){
-  	console.log("teste");
   	
   	var month = '01';
   	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
@@ -29,11 +28,168 @@ app.get('*', function(req, response) {
     	natural: "Jan " + day + ', ' + year 
     };
     response.json(time);
-    
-    //var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
-    //response.send(timestamp.now());
-    
   }
+
+  else if (isNaN(parameter) && (parameter.indexOf("February") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '02';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Feb " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+  else if (isNaN(parameter) && (parameter.indexOf("March") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '03';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("h")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Mar " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+  else if (isNaN(parameter) && (parameter.indexOf("April") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '04';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("l")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Apr " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+  else if (isNaN(parameter) && (parameter.indexOf("May") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '05';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "May " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+  else if (isNaN(parameter) && (parameter.indexOf("June") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '06';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("e")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Jun " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+  else if (isNaN(parameter) && (parameter.indexOf("July") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '07';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Jul " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+
+  else if (isNaN(parameter) && (parameter.indexOf("August") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '08';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("t")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Aug " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+  else if (isNaN(parameter) && (parameter.indexOf("September") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '09';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("r")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Sep " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+  else if (isNaN(parameter) && (parameter.indexOf("October") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '10';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("r")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Oct " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+  else if (isNaN(parameter) && (parameter.indexOf("November") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '11';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("r")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Nov " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+  else if (isNaN(parameter) && (parameter.indexOf("December") >= 0) && (parameter.indexOf(",") >= 0)){
+  	
+  	var month = '12';
+  	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
+    var day = parameter.substring((parameter.indexOf("r")+1),(parameter.indexOf(",")));
+    var parsedDate = year + '/' + month + '/' + day;
+    var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    var time = {
+    	unix: unixTime,
+    	natural: "Dec " + day + ', ' + year 
+    };
+    response.json(time);
+  }
+
+
+
+
+
+
   else if (parameter != "" && !isNaN(parameter)){
     var a = new Date(parameter * 1000);
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -47,6 +203,9 @@ app.get('*', function(req, response) {
     };
     response.json(time);
   }
+
+  else
+  	res.send("Error");
 
 
 });
