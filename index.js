@@ -27,14 +27,15 @@ app.get('*', function(req, response) {
   var parameter = (req.originalUrl).substring(1,(req.originalUrl).length)
   //response.send(parameter);
   if (isNaN(parameter) && (parameter.indexOf("January") >= 0) && (parameter.indexOf(",") >= 0)){
-  	console.log("Entrou na func!");
-  	response.send("teste");
-  	/*
+  	//response.send("teste");
+  	
   	var month = '01';
   	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
     var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
     var parsedDate = year + '/' + month + '/' + day;
     console.log(parsedDate);
+    response.send(parsedDate);
+    /*
     var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
     response.send(parsedUnixTime);
     */
