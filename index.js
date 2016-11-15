@@ -28,6 +28,7 @@ app.get('*', function(req, response) {
   //response.send(parameter);
   if (isNaN(parameter) && (parameter.indexOf("January") >= 0) && (parameter.indexOf(",") >= 0)){
   	console.log("Entrou na func!");
+  	/*
   	var month = '01';
   	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
     var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
@@ -35,6 +36,7 @@ app.get('*', function(req, response) {
     console.log(parsedDate);
     var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
     response.send(parsedUnixTime);
+    */
   }
   else if (parameter != "" && !isNaN(parameter)){
     var a = new Date(parameter * 1000);
