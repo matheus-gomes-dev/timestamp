@@ -36,8 +36,8 @@ app.get('*', function(req, response) {
     //console.log(parsedDate);
     //response.send(parsedDate);
     
-    var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
-    response.send(parsedUnixTime);
+    //var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
+    response.send(timestamp.now());
     
   }
   else if (parameter != "" && !isNaN(parameter)){
