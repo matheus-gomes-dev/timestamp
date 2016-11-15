@@ -34,10 +34,10 @@ app.get('*', function(req, response) {
   	var year = parameter.substring((parameter.indexOf("?")+1),parameter.length);
     var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
     var parsedDate = year + '/' + month + '/' + day;
-    var teste = moment('2015-07-12 14:59:23', 'YYYY-MM-DD HH:mm:ss').valueOf();
+    var teste = moment('2015-07-12 14:59:23', 'YYYY-MM-DD HH:mm:ss').valueOf()/1000;
     //console.log(parsedDate);
     console.log(teste);
-    response.json(teste);
+    response.json(teste);//moment returns an object
     
     //var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
     //response.send(timestamp.now());
