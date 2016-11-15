@@ -33,8 +33,9 @@ app.get('*', function(req, response) {
   	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
     var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
     var parsedDate = year + '/' + month + '/' + day;
+    var unixtime = Date.parse("24-Nov-2009 17:57:35").getTime()/1000;
     //console.log(parsedDate);
-    response.send("miewom");
+    response.send(unixtime);
     
     //var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
     //response.send(timestamp.now());
