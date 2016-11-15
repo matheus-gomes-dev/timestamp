@@ -36,6 +36,7 @@ app.get('*', function(req, response) {
     var parsedDate = year + '/' + month + '/' + day;
     var teste = moment('2015-07-12 14:59:23', 'YYYY-MM-DD HH:mm:ss').valueOf();
     //console.log(parsedDate);
+    console.log(teste);
     response.send(teste);
     
     //var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
