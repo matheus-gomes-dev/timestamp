@@ -26,7 +26,7 @@ app.get('*', function(req, response) {
     var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
     var time = {
     	unix: unixTime,
-    	natural: "January " + day + ', ' + year 
+    	natural: "Jan " + day + ', ' + year 
     };
     response.json(time);
     
@@ -41,7 +41,11 @@ app.get('*', function(req, response) {
     var month = months[a.getMonth()];
     var date = a.getDate();
     var time = date + ' ' + month + ' ' + year;
-    response.send(time);
+    var time = {
+    	unix: parameter,
+    	natural: month + date + ', ' + year 
+    };
+    response.json(time);
   }
 
 
