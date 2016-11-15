@@ -27,7 +27,7 @@ app.get('*', function(req, response) {
   var parameter = (req.originalUrl).substring(1,(req.originalUrl).length)
   //response.send(parameter);
   if (isNaN(parameter) && (parameter.indexOf("January") >= 0) && (parameter.indexOf(",") >= 0)){
-  	//response.send("teste");
+  	console.log("teste");
   	
   	var month = '01';
   	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
@@ -37,7 +37,7 @@ app.get('*', function(req, response) {
     //response.send(parsedDate);
     
     //var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
-    response.send(timestamp.now());
+    //response.send(timestamp.now());
     
   }
   else if (parameter != "" && !isNaN(parameter)){
