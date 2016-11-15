@@ -33,12 +33,12 @@ app.get('*', function(req, response) {
   	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
     var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
     var parsedDate = year + '/' + month + '/' + day;
-    console.log(parsedDate);
-    response.send(parsedDate);
-    /*
+    //console.log(parsedDate);
+    //response.send(parsedDate);
+    
     var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
     response.send(parsedUnixTime);
-    */
+    
   }
   else if (parameter != "" && !isNaN(parameter)){
     var a = new Date(parameter * 1000);
