@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var url = require('url');
-var moment = require('moment');
+var moment = require('moment')
 
 
 app.set('port', (process.env.PORT || 5000));
@@ -34,9 +34,9 @@ app.get('*', function(req, response) {
   	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
     var day = parameter.substring((parameter.indexOf("y")+1),(parameter.indexOf(",")));
     var parsedDate = year + '/' + month + '/' + day;
-    var unixtime = Date.parse("24-Nov-2009 17:57:35").getTime()/1000;
+    var teste = moment('2015-07-12 14:59:23', 'YYYY-MM-DD HH:mm:ss').valueOf();
     //console.log(parsedDate);
-    response.send(unixtime);
+    response.send(teste);
     
     //var parsedUnixTime = (new Date(parsedDate).getTime()/1000);
     //response.send(timestamp.now());
@@ -49,7 +49,7 @@ app.get('*', function(req, response) {
     var month = months[a.getMonth()];
     var date = a.getDate();
     var time = date + ' ' + month + ' ' + year;
-    response.send(moment('2015-07-12 14:59:23', 'YYYY-MM-DD HH:mm:ss').valueOf());
+    response.send(time);
   }
 
 
