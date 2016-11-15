@@ -28,6 +28,7 @@ app.get('*', function(req, response) {
   //response.send(parameter);
   if (isNaN(parameter) && (parameter.indexOf("January") >= 0) && (parameter.indexOf(",") >= 0)){
   	console.log("Entrou na func!");
+  	response.send("teste");
   	/*
   	var month = '01';
   	var year = parameter.substring((parameter.indexOf(",")+1),parameter.length);
