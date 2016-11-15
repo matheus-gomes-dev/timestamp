@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var url = require('url');
+var moment = require('moment');
 
 
 app.set('port', (process.env.PORT || 5000));
@@ -48,7 +49,7 @@ app.get('*', function(req, response) {
     var month = months[a.getMonth()];
     var date = a.getDate();
     var time = date + ' ' + month + ' ' + year;
-    response.send(time);
+    response.send(moment('2015-07-12 14:59:23', 'YYYY-MM-DD HH:mm:ss').valueOf());
   }
 
 
