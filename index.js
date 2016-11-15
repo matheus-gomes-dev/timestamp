@@ -178,6 +178,7 @@ app.get('*', function(req, response) {
     var day = parameter.substring((parameter.indexOf("r")+1),(parameter.indexOf(",")));
     var parsedDate = year + '/' + month + '/' + day;
     var unixTime = moment(parsedDate, 'YYYY-MM-DD').valueOf()/1000;
+    unixTime.replace(/%20/g, " ");
     var time = {
     	unix: unixTime,
     	natural: "Dec " + day + ', ' + year 
